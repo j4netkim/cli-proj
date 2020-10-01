@@ -1,6 +1,7 @@
 class CLI
 
     def product
+        API.get_polish
         puts ""
         puts "_____________________________"
         puts ""
@@ -14,7 +15,7 @@ class CLI
         puts ""
        
         @tag = gets.strip.downcase
-        API.get_polish(@tag)
+        
 
     end 
 

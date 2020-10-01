@@ -1,4 +1,5 @@
 class NailPolish
+    attr_accessor :brand, :name, :price, :colour
     # the model
 
     @@all = []
@@ -11,6 +12,9 @@ class NailPolish
         @@all 
     end 
     # custom getter. IMPLICIT RETURN. We're forcing evaluation here. 
+
+    def self.find_by_tag(tag)
+        @@all
 
 
 end 
