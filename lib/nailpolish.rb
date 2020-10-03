@@ -14,9 +14,7 @@ class NailPolish
         @@all << self 
     end 
 
-    def price 
-        @price 
-    end 
+
 
     def self.all 
         @@all 
@@ -29,6 +27,11 @@ class NailPolish
             puts "#{i}. #{p.name}"
         end 
     end 
+
+    # def polish_list(tag)
+    #     @polish_list = self.all.select {|np| np.tag_list.include?(tag)} 
+    # end 
         
 end 
+
 
