@@ -9,10 +9,13 @@ class API
         # sending get request to the given url
 
         polish = JSON.parse(response)
-        # using this to make business objects to use in cli to print out
-        binding.pry
-
+        polish.each do |p|
+            # binding.pry
+            NailPolish.new(brand: p["brand"], name: p["name"].strip, price: p["price"], product_colors: p["product_colors"], tag_list: p["tag_list"]) if p["brand"] != nil
+        end 
     end 
+end 
+
 
 
 
@@ -20,4 +23,3 @@ class API
     
 
 
-end
