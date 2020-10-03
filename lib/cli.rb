@@ -23,7 +23,6 @@ class CLI
             input = gets.strip
             polish = titleize(input)
             if polish.to_i > 0 && polish.to_i <= @polish_list.length
-                puts "Hello"
             elsif polish == 'Vegan' || polish == 'Gluten Free' || polish == 'Dairy Free'
                 NailPolish.find_by_tag(polish)
                 prompt
@@ -41,12 +40,39 @@ class CLI
         puts ""
         puts "________________________________________________________________________________"
         puts ""
-        puts "Please enter the number you would like to find more information on."
+        puts "Please enter the number you would like to see the price of."
         puts ""
         puts "Otherwise hit 'exit' to exit."
         puts "________________________________________________________________________________"
         puts ""
     end
+
+    def prompt_two
+        puts ""
+        puts "________________________________________________________________________________"
+        puts ""
+        puts "Please enter another tag 'Vegan', 'Gluten Free' or 'Dairy Free'."
+        puts ""
+        puts "Otherwise hit 'exit' to exit."
+        puts "________________________________________________________________________________"
+        puts ""
+    end
+        
+
+
+
+    def get_price
+
+        while input != 'Exit' do 
+            input = gets.strip
+            polish = titleize(input)
+            if polish#a user inputs a number 
+                # then give them the price for the specific number 
+            prompt_two
+            end 
+        end
+    end 
+
 
 
     def end_method

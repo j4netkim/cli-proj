@@ -14,6 +14,10 @@ class NailPolish
         @@all << self 
     end 
 
+    def price 
+        @price 
+    end 
+
     def self.all 
         @@all 
     end 
