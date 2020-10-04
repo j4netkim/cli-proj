@@ -5,7 +5,8 @@ This is a CLI application that helps you find nail polish options based on a cer
 
 
 
-Start
+To Start
+
 You will need to require the following gems:
 - Pry
     gem install pry
@@ -23,7 +24,7 @@ How To Run
 
 To run this application, you can download a copy from:
     https://github.com/j4netkim/cli-proj.git
-    
+
 After downloading to your local environment, open the file and run:
     ruby bin/polishes
 

@@ -1,5 +1,4 @@
 class CLI
-    attr_accessor :polish_list
     
 
 
@@ -19,15 +18,15 @@ class CLI
         API.get_polish
         input = ""
         polish = titleize(input)
-
-
-
-        until polish == 'Exit' do
+    
+    
+        until input == 'Exit' do
             input = gets.strip
-            polish = titleize(input)
-            # binding.pry
-            if polish.to_i > 0 && polish.to_i <= NailPolish.new(polish_list.length)
-                get_price(input)
+            polish = titleize(input) 
+            if polish.to_i > 0 && polish.to_i <= NailPolish.all.length
+                price = NailPolish.all[input.to_i-1]
+                print_price(price)
+                # get_price(input)
             elsif polish == 'Vegan' || polish == 'Gluten Free' || polish == 'Dairy Free'
                 NailPolish.find_by_tag(polish)
                 prompt
@@ -36,15 +35,9 @@ class CLI
             else
                 puts "Sorry, I'm not sure what you're trying to say. Lets try that again."
             end
+            input = gets.strip
         end
-    end 
-
-    # def polish_list
-    #     np = NailPolish.new()
-    #     print(np.polish_list)
-    # end 
-
-
+    end
 
 
 
@@ -73,14 +66,21 @@ class CLI
     
 
 
-    def get_price(input)
-        price_list = @polish_list.each {|np| puts np.price} 
-        price = price_list[(input.to_i)-1]
-        puts price
+    # def get_price(input)
+    #     price_list = @polish_list.each {|np| puts np.price} 
+    #     price = price_list[input.to_i-1]
+    #     puts price
+    # end 
+
+    def print_price(price)
+        puts ""
+        puts "Name: #{price.name}"
+        puts ""
+        puts "Cost: #{price.cost}"
+        puts ""
     end 
 
     def titleize(input)
         input.split(" ").map(&:capitalize).join(" ")
     end 
-end
-
+end 
