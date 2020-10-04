@@ -1,4 +1,5 @@
 class CLI
+    attr_accessor :polish_list
     
 
 
@@ -21,12 +22,11 @@ class CLI
 
 
 
-        # NailPolish.find_by_tag(polish)
-
         until polish == 'Exit' do
             input = gets.strip
             polish = titleize(input)
-            if polish.to_i > 0 && polish.to_i <= np.polish_list.length
+            # binding.pry
+            if polish.to_i > 0 && polish.to_i <= NailPolish.new(polish_list.length)
                 get_price(input)
             elsif polish == 'Vegan' || polish == 'Gluten Free' || polish == 'Dairy Free'
                 NailPolish.find_by_tag(polish)
@@ -38,6 +38,11 @@ class CLI
             end
         end
     end 
+
+    # def polish_list
+    #     np = NailPolish.new()
+    #     print(np.polish_list)
+    # end 
 
 
 
