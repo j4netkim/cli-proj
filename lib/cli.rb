@@ -1,4 +1,6 @@
 class CLI
+    
+
 
     def product
         puts ""
@@ -18,12 +20,13 @@ class CLI
         polish = titleize(input)
 
 
+
         # NailPolish.find_by_tag(polish)
 
         until polish == 'Exit' do
             input = gets.strip
             polish = titleize(input)
-            if polish.to_i > 0 && polish.to_i <= NailPolish.polish_list.size
+            if polish.to_i > 0 && polish.to_i <= np.polish_list.length
                 get_price(input)
             elsif polish == 'Vegan' || polish == 'Gluten Free' || polish == 'Dairy Free'
                 NailPolish.find_by_tag(polish)
@@ -35,6 +38,8 @@ class CLI
             end
         end
     end 
+
+
 
 
 
@@ -59,7 +64,8 @@ class CLI
         puts "________________________________________________________________________________"
         puts ""
     end
-        
+    
+    
 
 
     def get_price(input)
@@ -68,14 +74,8 @@ class CLI
         puts price
     end 
 
-
-    # def end_method
-    #     puts "Thanks for using our finder! Have a great day :)"
-    # end
-
-
-
     def titleize(input)
         input.split(" ").map(&:capitalize).join(" ")
     end 
-end 
+end
+
