@@ -1,51 +1,62 @@
-Nail Polish Finder CLI
+# Nail Polish Finder CLI
 
 This is a CLI application that helps you find nail polish options based on a certain tag. You will be able to find your vegan, gluten free, and dairy free options! 
 
 
 
 
-Start
+## Start
 You will need to require the following gems:
 - Pry
-    gem install pry
+```ruby
+gem install pry
+```
 
 - HTTParty
-    gem install httparty
+```ruby
+gem install httparty
+```
 
 - JSON
-    gem install json
+```ruby
+gem install json
+```
+  
 
 
 
 
-How To Run
+## How To Run
 
 To run this application, you can download a copy from:
     https://github.com/j4netkim/cli-proj.git
     
 After downloading to your local environment, open the file and run:
-    ruby bin/polishes
+```ruby
+ruby bin/polishes
+```
 
 You will see instructions to type in tags to get your options. You will see a numbered list. 
 
 
 
 
-Author 
+## Author 
 @j4netkim
 
 
 
-Acknowledgments
+## Acknowledgments
 This application was built using Makeup API
-    http://makeup-api.herokuapp.com/
+```ruby
+http://makeup-api.herokuapp.com/
+```
 
 
 
 
 
-License
+## License
 Licensed under the MIT license:
 
 Copyright(c) 2020 Janet Kim
