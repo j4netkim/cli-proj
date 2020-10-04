@@ -23,7 +23,7 @@ You will need to require the following gems:
 How To Run
 
 To run this application, you can download a copy from:
-    https://github.com/j4netkim/cli-proj.git
+    https://github.com/j4netkim/cli-proj
 
 After downloading to your local environment, open the file and run:
     ruby bin/polishes
