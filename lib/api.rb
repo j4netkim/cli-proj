@@ -1,6 +1,4 @@
 class API
-    # srp separation of responsibility principle
-    # this is where i make a call to an api and get info to make objects out of 
     
     def self.get_polishes
         url = "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=nail_polish"

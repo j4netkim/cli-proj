@@ -13,22 +13,14 @@ class NailPolish
         @tag_list = tag_list
         @polish_list = polish_list
         @@all << self
-        # everytime I make a nail polish object Im shoveling in self, the object im initializing
     end 
 
 
 
     def self.all 
         @@all 
-    end 
-
-
-
-  
+    end  
 end
-
-        # @polish_list = self.all.select {|np| np.tag_list.include?(tag)} 
-        # now give me a numbered list of those specific polishes
 
 
 
