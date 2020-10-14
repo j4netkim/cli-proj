@@ -24,7 +24,7 @@ class CLI
             if polish.to_i > 0 && polish.to_i <= NailPolish.all.length
                 polish_obj = NailPolish.all.select {|np| np.tag_list.include?(@polish_type)}[input.to_i-1]
                 print_polish(polish_obj)
-
+                
             elsif polish == 'Vegan' || polish == 'Gluten Free' || polish == 'Dairy Free'
                 @polish_type = polish
                 polishes = NailPolish.all.select {|np| np.tag_list.include?(@polish_type)}
@@ -66,7 +66,7 @@ class CLI
         puts ""
         puts "________________________________________________________________________________"
         puts ""
-        puts "Please enter the number you would like to see the price of."
+        puts "Please enter the number you would like to see information on."
         puts ""
         puts "Or you can enter 'Vegan', 'Gluten Free', or 'Dairy Free' for more!"
         puts ""
