@@ -1,7 +1,4 @@
 #!/usr/bin/env ruby
-#This is going to tell our application that this is a ruby application
 require_relative '../config/env'
 
 CLI.new.product
-# In order to run a new instance of my cli class
-# this will return a new cli object in place so then I can call my product instance method on top of this. 
