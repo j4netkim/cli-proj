@@ -1,5 +1,6 @@
 class NailPolish
-    attr_accessor :brand, :name, :price, :product_colors, :tag_list, :polish_list
+    attr_reader :brand, :name, :price, :product_colors, :tag_list, :polish_list
+    
 
 
     @@all = []
